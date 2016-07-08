@@ -1,6 +1,6 @@
 
 
-class ParaMorse
+class c
 
 
 end
