@@ -1,5 +1,5 @@
 
-class Alphabeth
+class Alphabet
   attr_reader :trans_morse, :numbers
 
   def initialize
