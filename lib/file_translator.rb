@@ -1,6 +1,6 @@
 require 'pry'
 require_relative "file_reader"
-require_relative "night_writer"
+require_relative "paramorse"
 
   input   = FileReader.read(ARGV[0])
   file    = ParaMorse.new
