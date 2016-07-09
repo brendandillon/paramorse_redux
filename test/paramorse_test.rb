@@ -14,4 +14,13 @@ def test_queue_pushes_a_word_in
 end
 
 
+def test_queue_pops_a_word_out
+  q = ParaMorse::Queue.new
+  q.push("something")
+  assert_equal "something", q.queue.join
+  q.pop
+  assert_equal [], q.queue
+end
+
+
 end
