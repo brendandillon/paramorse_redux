@@ -13,8 +13,8 @@ module ParaMorse
     end
 
     def push(element)
+      element = element.upcase.chars
       @queue.push(element)
-      self
     end
 
     def count
@@ -29,24 +29,21 @@ module ParaMorse
 
   class LetterEncoder < Array
 
-    attr_reader :alphabet
+    attr_reader :alphabet, :queue
 
     def initialize
       @reader = FileReader.new
       @alphabet = Alphabet.new
+      @queue = Queue.new.queue
     end
 
     def encode(queue)
-      something = Array.new.push(queue)
+      sorted_queue = queue.pop
       translated_morse = []
-      something.each do |letter|
-        if letter == letter.upcase && letter != letter.downcase
-          translated_morse << alphabet.trans_morse[letter.downcase]
-        else
-          translated_morse << alphabet.trans_morse[letter]
-        end
+      sorted_queue.each do |letter|
+      translated_morse << @alphabet.trans_morse[letter]
       end
-      translated_morse.join
+      translated_morse.pop.join
     end
 
   end
