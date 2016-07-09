@@ -35,13 +35,18 @@ class ParaMorseTest < Minitest::Test
     assert_equal "1", q.peek
   end
 
-  def test_queue_peeks_multiple_chars
+  def test_peeks_multiple_chars
     q = ParaMorse::Queue.new
     q.push("1","0","1","1","1")
     assert_equal ["1", "0", "1"], q.peek(3)
   end
 
-
+  def test_peeks_mult_chars_and_queue_remains_the_same
+    q = ParaMorse::Queue.new
+    q.push("1","0","1","1","1")
+    assert_equal ["1", "0", "1"], q.peek(3)
+    assert_equal 5, q.count
+  end
 
   # def test_queue_pushes_a_letter_in
     # q = ParaMorse::Queue.new
