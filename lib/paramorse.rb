@@ -27,7 +27,7 @@ module ParaMorse
 
   end
 
-  class LetterEncoder < Array
+  class LetterEncoder
 
     attr_reader :alphabet, :queue
 
