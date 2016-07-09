@@ -7,30 +7,83 @@ require "./lib/paramorse"
 class ParaMorseTest < Minitest::Test
 
 
-  def test_queue_pushes_a_word_in
+  def test_queue_pushes_one_morse_binary_number
     q = ParaMorse::Queue.new
-    q.push("something")
-    assert_equal "SOMETHING", q.queue.join
+    assert_equal ["1"], q.push("1")
   end
 
-  def test_queue_count_one_word
+  def test_queue_pushes_multiple_morse_binary_number
     q = ParaMorse::Queue.new
-    q.push("something")
-    assert_equal 1, q.queue.count
+    assert_equal ["1","0","1","1","1"], q.push("1","0","1","1","1")
   end
 
-  def test_queue_pops_a_word_out
+  def test_queue_counts_one_number
     q = ParaMorse::Queue.new
-    q.push("something")
-    assert_equal "SOMETHING", q.queue.join
-    q.pop
-    assert_equal [], q.queue
+    q.push("1")
+    assert_equal 1, q.count
   end
 
-  def test_peek_one_letter
-      #need to write this test
+  def test_queue_counts_multiple_number
+    q = ParaMorse::Queue.new
+    q.push("1","0","1","1","1")
+    assert_equal 5, q.count
   end
 
+  def test_queue_peeks_one_char
+    q = ParaMorse::Queue.new
+    q.push("1","0","1","1","1")
+    assert_equal "1", q.peek
+  end
+
+  def test_queue_peeks_multiple_chars
+    q = ParaMorse::Queue.new
+    q.push("1","0","1","1","1")
+    assert_equal ["1", "0", "1"], q.peek(3)
+  end
+
+
+
+  # def test_queue_pushes_a_letter_in
+    # q = ParaMorse::Queue.new
+  #   q.push("a")
+  #   assert_equal "A", q.queue.join
+  # end
+  #
+  # def test_queue_pushes_a_word_in
+  #   q = ParaMorse::Queue.new
+  #   q.push("something")
+  #   assert_equal "SOMETHING", q.queue.join
+  # end
+  #
+  # def test_queue_count_one_letter
+  #   q = ParaMorse::Queue.new
+  #   q.push("a")
+  #   assert_equal 1, q.queue.count
+  # end
+  #
+  # def test_queue_count_one_word
+  #   q = ParaMorse::Queue.new
+  #   q.push("something")
+  #   assert_equal 1, q.queue.count
+  # end
+  #
+  # def test_queue_pops_a_word_out
+  #   q = ParaMorse::Queue.new
+  #   q.push("something")
+  #   assert_equal "SOMETHING", q.queue.join
+  #   q.pop
+  #   assert_equal [], q.queue
+  #   binding.pry
+  # end
+  #
+  # def test_peek_one_letter
+  #   q = ParaMorse::Queue.new
+  #   q.push('a')
+  #   letter_encoder = ParaMorse::LetterEncoder.new
+  #   letter_encoder.encode(q.queue)
+  #   assert_equal "1", q.peek
+  # end
+  #
   def test_encode_one_letter
     q = ParaMorse::Queue.new
     q.push("a")
