@@ -27,7 +27,7 @@ module ParaMorse
 
   end
 
-  class LetterEncoder
+  class LetterEncoder < Array
 
     attr_reader :alphabet
 
@@ -36,8 +36,8 @@ module ParaMorse
       @alphabet = Alphabet.new
     end
 
-    def encode(word)
-      something = Array.new.push(word)
+    def encode(queue)
+      something = Array.new.push(queue)
       translated_morse = []
       something.each do |letter|
         if letter == letter.upcase && letter != letter.downcase
