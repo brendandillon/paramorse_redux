@@ -3,11 +3,17 @@ require_relative "file_reader"
 
 
 
-class ParaMorse
+module ParaMorse
+
+class Queue
 
 def initialize
   @reader = FileReader.new
   @alphabet = Alphabet.new
+end
+
+
+
 end
 
 end
