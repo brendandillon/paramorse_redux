@@ -28,11 +28,7 @@ class ParaMorseTest < Minitest::Test
   end
 
   def test_peek_one_letter
-    q = ParaMorse::Queue.new
-    q.push("something")
-    assert_equal "SOMETHING", q.queue.join
-    q.pop
-    assert_equal [], q.queue
+      #need to write this test
   end
 
   def test_encode_one_letter
