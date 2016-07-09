@@ -9,13 +9,7 @@ module ParaMorse
     attr_accessor :queue
 
     def initialize
-      @reader = FileReader.new
-      @alphabet = Alphabet.new
       @queue = Array.new
-    end
-
-    def pop
-      @queue.pop
     end
 
     def push(element)
@@ -23,10 +17,29 @@ module ParaMorse
       self
     end
 
-    def size
+    def count
       @queue.size
     end
 
+    def pop
+      @queue.pop
+    end
+
   end
+
+  class LetterEncoder
+
+    def initialize
+      @reader = FileReader.new
+      @alphabet = Alphabet.new
+
+    end
+
+    def encoder
+    end
+
+
+  end
+
 
 end
