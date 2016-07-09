@@ -26,11 +26,11 @@
 # end
 
 class Alphabet
-attr_reader :trans_braille, :numbers
+attr_reader :trans_morse, :numbers
 
   def initialize
 
-    @trans_braille =  {
+    @trans_morse =  {
       "a" => ["10111"],
       "b" => ["111010101"],
       "c" => ["11101011101"],   "d" => ["1110101"],

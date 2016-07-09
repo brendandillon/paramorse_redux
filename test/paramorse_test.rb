@@ -35,5 +35,9 @@ def test_peek_one_letter
   assert_equal [], q.queue
 end
 
+def test_encode_one_letter
+  letter_encoder = ParaMorse::LetterEncoder.new
+  assert_equal "10111", letter_encoder.encode("a")
+end
 
 end

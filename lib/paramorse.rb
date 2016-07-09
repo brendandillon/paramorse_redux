@@ -29,15 +29,25 @@ module ParaMorse
 
   class LetterEncoder
 
+    attr_reader :alphabet
+
     def initialize
       @reader = FileReader.new
       @alphabet = Alphabet.new
-
     end
 
-    def encoder
+    def encode(word)
+      something = Array.new.push(word)
+      translated_morse = []
+      something.each do |letter|
+        if letter == letter.upcase && letter != letter.downcase
+          translated_morse << alphabet.trans_morse[letter.downcase]
+        else
+          translated_morse << alphabet.trans_morse[letter]
+        end
+      end
+      translated_morse.join
     end
-
 
   end
 
