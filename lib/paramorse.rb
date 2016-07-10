@@ -4,6 +4,10 @@ require_relative "file_reader"
 
 module ParaMorse
 
+  def initialize
+    @reader = FileReader.new
+  end
+
   class Queue
     attr_accessor :queue
 
@@ -46,7 +50,21 @@ module ParaMorse
     attr_reader :alphabet, :queue
 
     def initialize
-      @reader = FileReader.new
+      @alphabet = Alphabet.new
+      @queue = Queue.new.queue
+    end
+
+    def encode(queue)
+      queue.dup.map! do |letter|
+        alphabet.trans_morse[letter]
+      end.pop.join
+    end
+  end
+
+  class LetterDecoder
+    attr_reader :alphabet, :queue
+
+    def initialize
       @alphabet = Alphabet.new
       @queue = Queue.new.queue
     end
