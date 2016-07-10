@@ -60,6 +60,18 @@ class ParaMorseTest < Minitest::Test
     assert_equal ["0", "1", "1"], q.pop(3)
   end
 
+  def test_return_tail_of_the_queue
+    q = ParaMorse::Queue.new
+    q.push("3")
+    assert_equal "3", q.tail
+  end
+
+  def test_return_tail_of_the_queue
+    q = ParaMorse::Queue.new
+    q.push("0","1","2","3")
+    assert_equal ["2", "3"], q.tail(2)
+  end
+
   def test_clear_queue
     q = ParaMorse::Queue.new
     q.push("1","0","1","1")

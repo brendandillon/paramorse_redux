@@ -32,6 +32,11 @@ module ParaMorse
       queue.pop(number)
     end
 
+    def tail(index = nil)
+      return queue.last if index == nil
+      queue[-index..- 1]
+    end
+
     def clear
       queue.clear
     end
