@@ -51,13 +51,13 @@ module ParaMorse
 
     def initialize
       @alphabet = Alphabet.new
-      @queue = Queue.new.queue
+      @queue = Queue.new
     end
 
     def encode(queue)
       queue.dup.map! do |letter|
         alphabet.trans_morse[letter]
-      end.pop.join
+      end.pop
     end
   end
 
@@ -69,10 +69,39 @@ module ParaMorse
       @queue = Queue.new.queue
     end
 
-    def encode(queue)
+    def decode(queue)
       queue.dup.map! do |letter|
+        alphabet.trans_morse.key(letter)
+      end.pop
+    end
+  end
+
+  class Encoder
+    attr_reader :alphabet
+
+    def initialize
+      @alphabet = Alphabet.new
+    end
+
+    def encode(word)
+      word.upcase.each_char.map do |letter|
         alphabet.trans_morse[letter]
-      end.pop.join
+      end.join("000")
+    end
+
+  end
+
+  class Decoder
+    attr_reader :alphabet
+
+    def initialize
+      @alphabet = Alphabet.new
+    end
+
+    def decode(binary_input)
+      binary_input.split("000").map do |letter|
+        alphabet.trans_morse.key(letter)
+      end.join
     end
   end
 
