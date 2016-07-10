@@ -1,7 +1,7 @@
 require "minitest/pride"
 require "minitest/autorun"
 require 'simplecov'
-SimpleCov.start
+SimpleCov.start if ENV["COVERAGE"]
 require "./lib/alphabet"
 
 

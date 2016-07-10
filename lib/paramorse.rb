@@ -1,6 +1,5 @@
 require "pry"
 require_relative "alphabet"
-require_relative "file_reader"
 
 module ParaMorse
 
