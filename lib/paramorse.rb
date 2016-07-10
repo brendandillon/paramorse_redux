@@ -27,9 +27,8 @@ module ParaMorse
       queue[0..(index - 1)]
     end
 
-    def pop(number = 1)
-      pop_queue = queue
-      pop_queue.pop
+    def pop(number = nil)
+      return queue.pop if number == nil
     end
   end
 

@@ -48,47 +48,6 @@ class ParaMorseTest < Minitest::Test
     assert_equal 5, q.count
   end
 
-  # def test_queue_pushes_a_letter_in
-    # q = ParaMorse::Queue.new
-  #   q.push("a")
-  #   assert_equal "A", q.queue.join
-  # end
-  #
-  # def test_queue_pushes_a_word_in
-  #   q = ParaMorse::Queue.new
-  #   q.push("something")
-  #   assert_equal "SOMETHING", q.queue.join
-  # end
-  #
-  # def test_queue_count_one_letter
-  #   q = ParaMorse::Queue.new
-  #   q.push("a")
-  #   assert_equal 1, q.queue.count
-  # end
-  #
-  # def test_queue_count_one_word
-  #   q = ParaMorse::Queue.new
-  #   q.push("something")
-  #   assert_equal 1, q.queue.count
-  # end
-  #
-  # def test_queue_pops_a_word_out
-  #   q = ParaMorse::Queue.new
-  #   q.push("something")
-  #   assert_equal "SOMETHING", q.queue.join
-  #   q.pop
-  #   assert_equal [], q.queue
-  #   binding.pry
-  # end
-  #
-  # def test_peek_one_letter
-  #   q = ParaMorse::Queue.new
-  #   q.push('a')
-  #   letter_encoder = ParaMorse::LetterEncoder.new
-  #   letter_encoder.encode(q.queue)
-  #   assert_equal "1", q.peek
-  # end
-  #
   def test_encode_one_letter
     q = ParaMorse::Queue.new
     q.push("a")
