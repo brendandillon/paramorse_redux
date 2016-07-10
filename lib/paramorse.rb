@@ -52,4 +52,5 @@ module ParaMorse
       end.pop.join
     end
   end
+
 end

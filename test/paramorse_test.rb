@@ -66,7 +66,7 @@ class ParaMorseTest < Minitest::Test
     q.clear
     assert_equal 0, q.count
   end
-  
+
   def test_encode_one_letter
     q = ParaMorse::Queue.new
     q.push("a")
