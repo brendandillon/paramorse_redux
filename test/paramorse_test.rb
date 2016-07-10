@@ -74,4 +74,11 @@ class ParaMorseTest < Minitest::Test
     assert_equal "1110111010111", letter_encoder.encode(q.queue)
   end
 
+  def test_clear_queue
+    q = ParaMorse::Queue.new
+    q.push("1","0","1","1")
+    q.clear
+    assert_equal 0, q.count
+  end
+
 end

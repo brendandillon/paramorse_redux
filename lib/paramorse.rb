@@ -31,6 +31,10 @@ module ParaMorse
       return queue.pop if number == nil
       queue.pop(number)
     end
+
+    def clear
+      queue.clear
+    end
   end
 
   class LetterEncoder
