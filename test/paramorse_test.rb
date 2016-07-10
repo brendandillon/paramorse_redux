@@ -48,6 +48,18 @@ class ParaMorseTest < Minitest::Test
     assert_equal 5, q.count
   end
 
+  def test_queue_pops_one_number_out
+    q = ParaMorse::Queue.new
+    q.push("1","0","1","1","1")
+    assert_equal "1", q.pop
+  end
+
+  def test_queue_pops_multiple_numbers_out
+    q = ParaMorse::Queue.new
+    q.push("1","0","1","1")
+    assert_equal ["0", "1", "1"], q.pop(3)
+  end
+
   def test_encode_one_letter
     q = ParaMorse::Queue.new
     q.push("a")

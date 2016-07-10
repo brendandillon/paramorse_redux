@@ -29,6 +29,7 @@ module ParaMorse
 
     def pop(number = nil)
       return queue.pop if number == nil
+      queue.pop(number)
     end
   end
 
