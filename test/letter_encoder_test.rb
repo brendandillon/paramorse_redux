@@ -1,8 +1,5 @@
 require "minitest/pride"
 require "minitest/autorun"
-require "./lib/alphabet"
-require "./lib/queue"
-require "./lib/letter_encoder"
 require "./lib/paramorse"
 require 'simplecov'
 SimpleCov.start
