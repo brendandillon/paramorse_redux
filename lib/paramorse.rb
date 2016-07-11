@@ -23,10 +23,19 @@ module ParaMorse
 
     def peek(index = nil)
       return queue[0] if index == nil
+    end
+
+    def peek_multiple(index = nil)
+      return queue[0] if index == nil
       queue[0..(index - 1)]
     end
 
     def pop(number = nil)
+      return queue.pop if number == nil
+      queue.pop(number)
+    end
+
+    def pop_multiple(number = nil)
       return queue.pop if number == nil
       queue.pop(number)
     end

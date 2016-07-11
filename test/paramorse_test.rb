@@ -38,13 +38,13 @@ class ParaMorseTest < Minitest::Test
   def test_peeks_multiple_chars
     q = ParaMorse::Queue.new
     q.push("1","0","1","1","1")
-    assert_equal ["1", "0", "1"], q.peek(3)
+    assert_equal ["1", "0", "1"], q.peek_multiple(3)
   end
 
   def test_peeks_mult_chars_and_queue_remains_the_same
     q = ParaMorse::Queue.new
     q.push("1","0","1","1","1")
-    assert_equal ["1", "0", "1"], q.peek(3)
+    assert_equal ["1", "0", "1"], q.peek_multiple(3)
     assert_equal 5, q.count
   end
 
@@ -57,7 +57,7 @@ class ParaMorseTest < Minitest::Test
   def test_queue_pops_multiple_numbers_out
     q = ParaMorse::Queue.new
     q.push("1","0","1","1")
-    assert_equal ["0", "1", "1"], q.pop(3)
+    assert_equal ["0", "1", "1"], q.pop_multiple(3)
   end
 
   def test_return_tail_of_the_queue
