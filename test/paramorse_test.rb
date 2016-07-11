@@ -6,6 +6,14 @@ require "./lib/paramorse"
 
 class ParaMorseTest < Minitest::Test
 
+  def test_class_alphabet_exists
+    assert(Alphabet)
+  end
+
+  def test_class_paramorse_exists
+    assert (ParaMorse)
+  end
+
   def test_queue_data_structure_exits
     q = ParaMorse::Queue.new
     assert_equal Array.new, q.queue
