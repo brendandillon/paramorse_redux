@@ -1,8 +1,4 @@
-require "simplecov"
-SimpleCov.start
-require "minitest/pride"
-require "minitest/autorun"
-require "./lib/letter_decoder"
+require_relative 'test_handler'
 
 class LetterDecoderTest < Minitest::Test
 

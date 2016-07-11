@@ -1,6 +1,3 @@
-require_relative "queue"
-require_relative "alphabet"
-
 module ParaMorse
 
   class LetterEncoder
@@ -8,7 +5,7 @@ module ParaMorse
 
     def initialize
       @alphabet = Alphabet.new
-      @queue = Queue.new
+      @queue = Queue.new.queue
     end
 
     def encode(queue)

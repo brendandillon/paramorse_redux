@@ -1,5 +1,3 @@
-
-
 module ParaMorse
 
   class Queue

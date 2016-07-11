@@ -1,8 +1,4 @@
-require "simplecov"
-SimpleCov.start
-require 'minitest/autorun'
-require 'minitest/pride'
-require "./lib/queue"
+require_relative 'test_handler'
 
 class QueueTest < Minitest::Test
 

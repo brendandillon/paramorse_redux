@@ -1,6 +1,3 @@
-require_relative "alphabet"
-require_relative "queue"
-
 module ParaMorse
 
   class LetterDecoder
