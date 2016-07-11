@@ -51,7 +51,7 @@ module ParaMorse
     end
 
     def clear
-      queue.clear
+      @queue.clear
     end
   end
 
