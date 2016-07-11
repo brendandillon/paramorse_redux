@@ -1,11 +1,15 @@
 require "minitest/pride"
 require "minitest/autorun"
 require 'simplecov'
-SimpleCov.start 
+SimpleCov.start
 require "./lib/paramorse"
 
 class ParaMorseTest < Minitest::Test
 
+  def test_queue_data_structure_exits
+    q = ParaMorse::Queue.new
+    assert_equal [], q.queue
+  end
 
   def test_queue_pushes_one_morse_binary_number
     q = ParaMorse::Queue.new
