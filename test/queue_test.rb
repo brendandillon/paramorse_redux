@@ -6,7 +6,7 @@ require "./lib/queue"
 
 class QueueTest < Minitest::Test
 
-  def test_class_alphabet_exists
+  def test_class_queue_exists
     assert(Queue)
   end
 

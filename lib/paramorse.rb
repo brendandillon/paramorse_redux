@@ -1,6 +1,7 @@
 require "pry"
 require_relative "alphabet"
 require_relative "queue"
+require_relative "letter_encoder"
 
 #streamer will receive one character at a time
 #will store in an Array
@@ -8,21 +9,6 @@ require_relative "queue"
 #or it wil return an error message "it is not a word and will ask another input"
 
 module ParaMorse
-
-  class LetterEncoder
-    attr_reader :alphabet, :queue
-
-    def initialize
-      @alphabet = Alphabet.new
-      @queue = Queue.new
-    end
-
-    def encode(queue)
-      queue.dup.map! do |letter|
-        alphabet.trans_morse[letter]
-      end.pop
-    end
-  end
 
   class LetterDecoder
     attr_reader :alphabet, :queue

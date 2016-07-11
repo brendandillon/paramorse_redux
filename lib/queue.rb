@@ -31,7 +31,6 @@ module ParaMorse
 
     def pop(number = nil)
       return queue.pop if number == nil
-      queue.pop(number)
     end
 
     def pop_multiple(number = nil)
@@ -45,7 +44,7 @@ module ParaMorse
     end
 
     def clear
-      @queue.clear
+      queue.clear
     end
   end
 
