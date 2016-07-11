@@ -3,10 +3,6 @@ require_relative "alphabet"
 
 module ParaMorse
 
-  def initialize
-    @reader = FileReader.new
-  end
-
   class Queue
     attr_accessor :queue
 

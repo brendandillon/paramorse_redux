@@ -4,8 +4,6 @@ require 'simplecov'
 SimpleCov.start if ENV["COVERAGE"]
 require "./lib/alphabet"
 
-
-
 class AlphabetTest < Minitest::Test
 
   def test_class_alphabet_exists
