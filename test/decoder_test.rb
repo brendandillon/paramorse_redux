@@ -1,6 +1,7 @@
 require "minitest/pride"
 require "minitest/autorun"
-require "./lib/paramorse"
+require "./lib/decoder"
+require "./lib/alphabet"
 require 'simplecov'
 SimpleCov.start
 
