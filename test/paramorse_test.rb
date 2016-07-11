@@ -8,7 +8,7 @@ class ParaMorseTest < Minitest::Test
 
   def test_queue_data_structure_exits
     q = ParaMorse::Queue.new
-    assert_equal [], q.queue
+    assert_equal Array.new, q.queue
   end
 
   def test_queue_pushes_one_morse_binary_number
