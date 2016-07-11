@@ -1,8 +1,8 @@
+require "simplecov"
+SimpleCov.start
 require "minitest/pride"
 require "minitest/autorun"
 require "./lib/paramorse"
-require 'simplecov'
-SimpleCov.start
 
 class LetterEncoderTest < Minitest::Test
 
