@@ -1,4 +1,3 @@
-
 module ParaMorse
 
   class Decoder

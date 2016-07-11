@@ -4,7 +4,6 @@ require "./lib/paramorse"
 require 'simplecov'
 SimpleCov.start
 
-
 class LetterEncoderTest < Minitest::Test
 
   def test_class_letter_encoder_exists

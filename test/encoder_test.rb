@@ -5,7 +5,6 @@ require "./lib/alphabet"
 require 'simplecov'
 SimpleCov.start
 
-
 class EncoderTest < Minitest::Test
 
   def test_encode_a_word

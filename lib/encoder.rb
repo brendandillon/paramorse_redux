@@ -12,7 +12,6 @@ module ParaMorse
         alphabet.trans_morse[letter]
       end.join("000")
     end
-
   end
 
 end

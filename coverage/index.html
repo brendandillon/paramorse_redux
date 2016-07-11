@@ -14,14 +14,14 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-07-11T13:33:55-06:00">2016-07-11T13:33:55-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-07-11T13:38:13-06:00">2016-07-11T13:38:13-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">53.61%</span></span>
+    (<span class="covered_percent"><span class="red">54.31%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
@@ -32,8 +32,8 @@
   <a name="AllFiles"></a>
   <div>
     <b>13</b> files in total.
-    <b>194</b> relevant lines. 
-    <span class="green"><b>104</b> lines covered</span> and
+    <b>197</b> relevant lines. 
+    <span class="green"><b>107</b> lines covered</span> and
     <span class="red"><b>90</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -63,7 +63,7 @@
       <tr>
         <td class="strong"><a href="#f572cbfff3e187d9ef9257c4350a197580296a8a" class="src_link" title="lib/decoder.rb">lib/decoder.rb</a></td>
         <td class="red strong">62.5 %</td>
-        <td>18</td>
+        <td>17</td>
         <td>8</td>
         <td>5</td>
         <td>3</td>
@@ -73,7 +73,7 @@
       <tr>
         <td class="strong"><a href="#e2c6f14730faa16fb9e83d85c8a791c8df2c28be" class="src_link" title="lib/encoder.rb">lib/encoder.rb</a></td>
         <td class="red strong">62.5 %</td>
-        <td>18</td>
+        <td>17</td>
         <td>8</td>
         <td>5</td>
         <td>3</td>
@@ -103,9 +103,9 @@
       <tr>
         <td class="strong"><a href="#ff9e6ae97da5b425031ef90245ab4d6bda4f040d" class="src_link" title="lib/paramorse.rb">lib/paramorse.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>17</td>
-        <td>5</td>
-        <td>5</td>
+        <td>16</td>
+        <td>8</td>
+        <td>8</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -133,7 +133,7 @@
       <tr>
         <td class="strong"><a href="#aa35b9f0cc86918abdbd6261c86a674ecab65711" class="src_link" title="test/encoder_test.rb">test/encoder_test.rb</a></td>
         <td class="red strong">80.0 %</td>
-        <td>16</td>
+        <td>15</td>
         <td>10</td>
         <td>8</td>
         <td>2</td>
@@ -153,7 +153,7 @@
       <tr>
         <td class="strong"><a href="#57ed0f3920dbca0eacf4712b5eedb037c75165de" class="src_link" title="test/letter_encoder_test.rb">test/letter_encoder_test.rb</a></td>
         <td class="red strong">50.0 %</td>
-        <td>28</td>
+        <td>27</td>
         <td>18</td>
         <td>9</td>
         <td>9</td>
@@ -402,109 +402,103 @@
   <pre>
     <ol>
       
-        <li class="never" data-hits="" data-linenumber="1">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="2">
+        <li class="covered" data-hits="1" data-linenumber="1">
           <span class="hits">1</span>
           
           <code class="ruby">module ParaMorse</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="3">
+        <li class="never" data-hits="" data-linenumber="2">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="4">
+        <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
           <code class="ruby">  class Decoder</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="5">
+        <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
           <code class="ruby">    attr_reader :alphabet</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="never" data-hits="" data-linenumber="5">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="7">
+        <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
           <code class="ruby">    def initialize</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="8">
+        <li class="missed" data-hits="0" data-linenumber="7">
           
           
           <code class="ruby">      @alphabet = Alphabet.new</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
           <code class="ruby">    def decode(binary_input)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby">      binary_input.split(&quot;000&quot;).map do |letter|</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="13">
+        <li class="missed" data-hits="0" data-linenumber="12">
           
           
           <code class="ruby">        alphabet.trans_morse.key(letter)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="14">
+        <li class="missed" data-hits="0" data-linenumber="13">
           
           
           <code class="ruby">      end.join</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby">end</code>
@@ -615,22 +609,16 @@
         <li class="never" data-hits="" data-linenumber="15">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
           
           
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="17">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby">end</code>
@@ -933,8 +921,8 @@
     <h3>lib/paramorse.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>5</b> relevant lines. 
-      <span class="green"><b>5</b> lines covered</span> and
+      <b>8</b> relevant lines. 
+      <span class="green"><b>8</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -957,43 +945,43 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">require_relative &quot;queue&quot;</code>
+          <code class="ruby">require_relative &quot;decoder&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
+          <code class="ruby">require_relative &quot;encoder&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require_relative &quot;letter_decoder&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
           <code class="ruby">require_relative &quot;letter_encoder&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="6">
-          
-          
-          <code class="ruby">#streamer will receive one character at a time</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="7">
-          
-          
-          <code class="ruby">#will store in an Array</code>
+          <code class="ruby">require_relative &quot;queue&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
           
           
-          <code class="ruby">#when decode is called, it will either return the word (or letter)</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">#or it wil return an error message &quot;it is not a word and will ask another input&quot;</code>
+          <code class="ruby">module ParaMorse</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
@@ -1002,10 +990,10 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="11">
           
-          <code class="ruby">module ParaMorse</code>
+          
+          <code class="ruby">end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
@@ -1017,31 +1005,25 @@
         <li class="never" data-hits="" data-linenumber="13">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">#streamer will receive one character at a time</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">#will store in an Array</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">
           
           
-          <code class="ruby">  </code>
+          <code class="ruby">#when decode is called, it will either return the word (or letter)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
           
           
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="17">
-          
-          
-          <code class="ruby">end</code>
+          <code class="ruby">#or it wil return an error message &quot;it is not a word and will ask another input&quot;</code>
         </li>
       
     </ol>
@@ -1536,55 +1518,49 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="8">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="9">
+        <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
           <code class="ruby">class EncoderTest &lt; Minitest::Test</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
           <code class="ruby">  def test_encode_a_word</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="12">
+        <li class="missed" data-hits="0" data-linenumber="11">
           
           
           <code class="ruby">    encoder = ParaMorse::Encoder.new</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="13">
+        <li class="missed" data-hits="0" data-linenumber="12">
           
           
           <code class="ruby">    assert_equal &quot;1011101110001110111011100010111010001110101&quot;, encoder.encode(&quot;Word&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">end</code>
@@ -1800,133 +1776,127 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="8">
+        <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
           <code class="ruby">class LetterEncoderTest &lt; Minitest::Test</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="10">
+        <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
           <code class="ruby">  def test_class_letter_encoder_exists</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="11">
+        <li class="missed" data-hits="0" data-linenumber="10">
           
           
           <code class="ruby">    assert(ParaMorse::LetterEncoder)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="never" data-hits="" data-linenumber="12">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="14">
+        <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
           <code class="ruby">  def test_encode_one_letter</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="15">
+        <li class="missed" data-hits="0" data-linenumber="14">
           
           
           <code class="ruby">    q = ParaMorse::Queue.new</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="16">
+        <li class="missed" data-hits="0" data-linenumber="15">
           
           
           <code class="ruby">    q.push(&quot;a&quot;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="17">
+        <li class="missed" data-hits="0" data-linenumber="16">
           
           
           <code class="ruby">    letter_encoder = ParaMorse::LetterEncoder.new</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="18">
+        <li class="missed" data-hits="0" data-linenumber="17">
           
           
           <code class="ruby">    assert_equal &quot;10111&quot;, letter_encoder.encode(q.queue)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="never" data-hits="" data-linenumber="18">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="never" data-hits="" data-linenumber="19">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="21">
+        <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
           <code class="ruby">  def test_encode_one_different_letter_from_previous_example</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="22">
+        <li class="missed" data-hits="0" data-linenumber="21">
           
           
           <code class="ruby">    q = ParaMorse::Queue.new</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="23">
+        <li class="missed" data-hits="0" data-linenumber="22">
           
           
           <code class="ruby">    q.push(&quot;q&quot;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="24">
+        <li class="missed" data-hits="0" data-linenumber="23">
           
           
           <code class="ruby">    letter_encoder = ParaMorse::LetterEncoder.new</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="25">
+        <li class="missed" data-hits="0" data-linenumber="24">
           
           
           <code class="ruby">    assert_equal &quot;1110111010111&quot;, letter_encoder.encode(q.queue)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="26">
+        <li class="never" data-hits="" data-linenumber="25">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="27">
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="28">
+        <li class="never" data-hits="" data-linenumber="27">
           
           
           <code class="ruby">end</code>
