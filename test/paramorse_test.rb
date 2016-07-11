@@ -1,7 +1,7 @@
 require "minitest/pride"
 require "minitest/autorun"
 require 'simplecov'
-SimpleCov.start if ENV["COVERAGE"]
+SimpleCov.start 
 require "./lib/paramorse"
 
 class ParaMorseTest < Minitest::Test
