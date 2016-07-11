@@ -10,21 +10,6 @@ require_relative "letter_encoder"
 
 module ParaMorse
 
-  class LetterDecoder
-    attr_reader :alphabet, :queue
-
-    def initialize
-      @alphabet = Alphabet.new
-      @queue = Queue.new.queue
-    end
-
-    def decode(queue)
-      queue.dup.map! do |letter|
-        alphabet.trans_morse.key(letter)
-      end.pop
-    end
-  end
-
   class Encoder
     attr_reader :alphabet
 

@@ -1,19 +1,19 @@
-require_relative "queue"
 require_relative "alphabet"
+require_relative "queue"
 
 module ParaMorse
 
-  class LetterEncoder
+  class LetterDecoder
     attr_reader :alphabet, :queue
 
     def initialize
       @alphabet = Alphabet.new
-      @queue = Queue.new
+      @queue = Queue.new.queue
     end
 
-    def encode(queue)
+    def decode(queue)
       queue.dup.map! do |letter|
-        alphabet.trans_morse[letter]
+        alphabet.trans_morse.key(letter)
       end.pop
     end
   end
