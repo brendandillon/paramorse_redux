@@ -20,6 +20,4 @@ class AlphabetTest < Minitest::Test
     assert_equal "10111", alpha.trans_morse["A"]
   end
 
-
-
 end
