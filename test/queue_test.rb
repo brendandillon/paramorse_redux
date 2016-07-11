@@ -7,7 +7,7 @@ require "./lib/queue"
 class QueueTest < Minitest::Test
 
   def test_class_queue_exists
-    assert(Queue)
+    assert(ParaMorse::Queue)
   end
 
   def test_queue_data_structure_exits

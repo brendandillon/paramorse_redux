@@ -11,7 +11,7 @@ SimpleCov.start
 class LetterEncoderTest < Minitest::Test
 
   def test_class_letter_encoder_exists
-    assert(LetterEncoder)
+    assert(ParaMorse::LetterEncoder)
   end
 
   def test_encode_one_letter
