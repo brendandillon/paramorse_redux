@@ -1,4 +1,3 @@
-require 'pry'
 module ParaMorse
 
   class FileEncoder

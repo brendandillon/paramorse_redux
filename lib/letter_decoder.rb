@@ -1,5 +1,3 @@
-require_relative "alphabet"
-
 module ParaMorse
 
   class LetterDecoder
