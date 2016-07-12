@@ -1,3 +1,5 @@
+require_relative "alphabet"
+
 module ParaMorse
 
   class Encoder
@@ -7,8 +9,8 @@ module ParaMorse
       @alphabet = Alphabet.new
     end
 
-    def encode(word)
-      word.upcase.each_char.map do |letter|
+    def encode(phrase)
+      phrase.upcase.each_char.map do |letter|
         alphabet.trans_morse[letter]
       end.join("000")
     end

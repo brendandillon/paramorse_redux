@@ -1,3 +1,5 @@
+require_relative "alphabet"
+
 module ParaMorse
 
   class LetterEncoder
