@@ -18,7 +18,7 @@ class QueueTest < Minitest::Test
 
   def test_queue_pushes_multiple_morse_binary_number
     q = ParaMorse::Queue.new
-    assert_equal ["1","0","1","1","1"], q.push("1","0","1","1","1")
+    assert_equal ["1","0","1","1","1"], q.push("1","1","1","0","1")
   end
 
   def test_queue_counts_one_number
@@ -42,13 +42,13 @@ class QueueTest < Minitest::Test
   def test_peeks_multiple_chars
     q = ParaMorse::Queue.new
     q.push("1","0","1","1","1")
-    assert_equal ["1", "0", "1"], q.peek_multiple(3)
+    assert_equal ["1", "0", "1"], q.peek(3)
   end
 
   def test_peeks_mult_chars_and_queue_remains_the_same
     q = ParaMorse::Queue.new
     q.push("1","0","1","1","1")
-    assert_equal ["1", "0", "1"], q.peek_multiple(3)
+    assert_equal ["1", "0", "1"], q.peek(3)
     assert_equal 5, q.count
   end
 
@@ -60,8 +60,8 @@ class QueueTest < Minitest::Test
 
   def test_queue_pops_multiple_numbers_out
     q = ParaMorse::Queue.new
-    q.push("1","0","1","1")
-    assert_equal ["0", "1", "1"], q.pop_multiple(3)
+    q.push("1","1","0","1")
+    assert_equal ["0", "1", "1"], q.pop(3)
   end
 
   def test_return_tail_of_the_queue
@@ -73,7 +73,7 @@ class QueueTest < Minitest::Test
   def test_return_mult_tails_of_the_queue
     q = ParaMorse::Queue.new
     q.push("0","1","2","3")
-    assert_equal ["2", "3"], q.tail(2)
+    assert_equal ["3", "2"], q.tail(2)
   end
 
   def test_clear_queue
@@ -81,6 +81,13 @@ class QueueTest < Minitest::Test
     q.push("1","0","1","1")
     q.clear
     assert_equal 0, q.count
+  end
+
+  def test_queue_pushes_at_the_opposite_end_from_whence_it_pops
+    q = ParaMorse::Queue.new
+    q.push("0")
+    q.push("1")
+    assert_equal "0", q.pop
   end
 
 end
