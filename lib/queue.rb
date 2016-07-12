@@ -30,7 +30,7 @@ module ParaMorse
 
     def tail(index = nil)
       return queue.first if index == nil
-      queue[0 .. (index - 1)]
+      queue.take(index)
     end
 
     def clear
