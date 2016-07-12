@@ -4,11 +4,15 @@ module ParaMorse
     attr_reader :alphabet
 
     def initialize
-      @alphabet = Alphabet.new
+      @alphabet = ParaMorse::Alphabet.new
     end
 
     def decode(letter)
-      alphabet.trans_morse.key(letter)
+      if alphabet.trans_morse.has_key?(letter)
+        alphabet.trans_morse.key(letter)
+      else
+        nil
+      end
     end
   end
 

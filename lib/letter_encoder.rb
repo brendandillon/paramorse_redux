@@ -4,7 +4,7 @@ module ParaMorse
     attr_reader :alphabet
 
     def initialize
-      @alphabet = Alphabet.new
+      @alphabet = ParaMorse::Alphabet.new
     end
 
     def encode(letter)
