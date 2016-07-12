@@ -1,17 +1,14 @@
 module ParaMorse
 
   class LetterDecoder
-    attr_reader :alphabet, :queue
+    attr_reader :alphabet
 
     def initialize
       @alphabet = Alphabet.new
-      @queue = Queue.new.queue
     end
 
-    def decode(queue)
-      queue.dup.map! do |letter|
-        alphabet.trans_morse.key(letter)
-      end.pop
+    def decode(letter)
+      alphabet.trans_morse.key(letter)
     end
   end
 

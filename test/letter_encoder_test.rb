@@ -7,17 +7,13 @@ class LetterEncoderTest < Minitest::Test
   end
 
   def test_encode_one_letter
-    q = ParaMorse::Queue.new
-    q.push("a")
     letter_encoder = ParaMorse::LetterEncoder.new
-    assert_equal "10111", letter_encoder.encode(q.queue)
+    assert_equal "10111", letter_encoder.encode("a")
   end
 
   def test_encode_one_different_letter_from_previous_example
-    q = ParaMorse::Queue.new
-    q.push("q")
     letter_encoder = ParaMorse::LetterEncoder.new
-    assert_equal "1110111010111", letter_encoder.encode(q.queue)
+    assert_equal "1110111010111", letter_encoder.encode("q")
   end
 
 end
