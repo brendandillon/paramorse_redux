@@ -1,12 +1,12 @@
 module ParaMorse
 
   class StreamDecoder
-    attr_reader :words
+    attr_reader :letters
 
     def initialize
       @queue = ParaMorse::Queue.new
       @letter_decoder = ParaMorse::LetterDecoder.new
-      @words = []
+      @letters = []
     end
 
     def receive(recieved_data)
@@ -15,30 +15,27 @@ module ParaMorse
     end
 
     def parse
-      if @queue.tail(7) == ["0", "0", "0", "0", "0", "0", "0"]
-        @words << @queue.pop(@queue.count - 7).join.split("000").reverse
+      if @queue.tail(3) == ["0", "0", "0"]
+        @letters << @queue.pop(@queue.count - 3).join
         @queue.clear
+      elsif @queue.peek == "0" && @queue.tail == "1"
+        @letters << @queue.pop
       end
     end
 
-    def access_final_word
-      @words << @queue.pop(@queue.count).join.split("000").reverse
+    def access_final_letter
+      @letters << @queue.pop(@queue.count).join
       @queue.clear
     end
 
     def decode
-      access_final_word
-
+      access_final_letter
+      @letters.delete("")
       output = ""
-
-      @words.each do |word|
-        word.each do |letter|
-          output << @letter_decoder.decode(letter)
-        end
-        output << " "
+      @letters.each do |letter|
+        output << @letter_decoder.decode(letter)
       end
-      
-      return output[0..-2]
+      return output
     end
 
     def queue
