@@ -8,8 +8,8 @@ module ParaMorse
     end
 
     def decode(letter)
-      if alphabet.trans_morse.has_key?(letter)
-        alphabet.trans_morse.key(letter)
+      if alphabet.trans_morse.has_value?(letter)
+        return alphabet.trans_morse.key(letter)
       else
         nil
       end

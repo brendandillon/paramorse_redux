@@ -1,41 +1,36 @@
 module ParaMorse
-
-  class StreamDecoder
-    attr_reader :letters
+  class InstantNoodles
+    attr_reader :current_letter
 
     def initialize
       @queue = ParaMorse::Queue.new
       @letter_decoder = ParaMorse::LetterDecoder.new
-      @letters = []
+      @current_letter = ""
     end
 
     def receive(recieved_data)
       @queue.push(recieved_data)
       parse
+      return @letter_decoder.decode(@current_letter)
     end
 
     def parse
       if @queue.tail(3) == ["0", "0", "0"]
-        @letters << @queue.pop(@queue.count - 3).join
+        @current_letter = @queue.pop(@queue.count - 3).join
         @queue.clear
       elsif @queue.peek == "0" && @queue.tail == "1"
-        @letters << @queue.pop
+        @current_letter = @queue.pop
       end
     end
 
     def access_final_letter
-      @letters << @queue.pop(@queue.count).join
+      @current_letter = @queue.pop(@queue.count).join
       @queue.clear
     end
 
     def decode
       access_final_letter
-      @letters.delete("")
-      output = ""
-      @letters.each do |letter|
-        output << @letter_decoder.decode(letter)
-      end
-      return output
+      return @letter_decoder.decode(@current_letter)
     end
 
     def queue
