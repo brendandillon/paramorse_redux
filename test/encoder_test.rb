@@ -1,4 +1,4 @@
-require_relative 'test_handler'
+require './test/test_handler'
 
 class EncoderTest < Minitest::Test
 

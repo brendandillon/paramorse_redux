@@ -1,4 +1,4 @@
-require_relative 'test_handler'
+require './test/test_handler'
 
 class InstantNoodlesTest < Minitest::Test
   def test_can_recieve_input
@@ -64,7 +64,7 @@ class InstantNoodlesTest < Minitest::Test
     stream.receive("0")
     stream.receive("0")
     assert_equal "H", stream.receive("0")
-    
+
     stream.receive("1")
     stream.receive("0")
     stream.receive("1")

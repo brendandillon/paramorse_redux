@@ -1,15 +1,10 @@
 module ParaMorse
 
   class Encoder
-    attr_reader :alphabet
-
-    def initialize
-      @alphabet = ParaMorse::Alphabet.new
-    end
 
     def encode(phrase)
       phrase.upcase.each_char.map do |letter|
-        alphabet.trans_morse[letter]
+        ALPHABET[letter]
       end.join("000")
     end
   end
