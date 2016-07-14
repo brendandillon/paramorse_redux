@@ -5,10 +5,10 @@ module ParaMorse
     def initialize
       @queue = ParaMorse::Queue.new
       @letter_decoder = ParaMorse::LetterDecoder.new
-      @current_letter = ""
     end
 
     def receive(recieved_data)
+      @current_letter = ""
       @queue.push(recieved_data)
       parse
       return @letter_decoder.decode(@current_letter)
@@ -16,7 +16,7 @@ module ParaMorse
 
     def parse
       if @queue.tail(3) == ["0", "0", "0"]
-        @current_letter = @queue.pop(@queue.count - 3).join
+        @current_letter = @queue.pop(@queue.count - 3).join.reverse
         @queue.clear
       elsif @queue.peek == "0" && @queue.tail == "1"
         @current_letter = @queue.pop
@@ -24,7 +24,7 @@ module ParaMorse
     end
 
     def access_final_letter
-      @current_letter = @queue.pop(@queue.count).join
+      @current_letter = @queue.pop(@queue.count).join.reverse
       @queue.clear
     end
 
@@ -33,7 +33,7 @@ module ParaMorse
       return @letter_decoder.decode(@current_letter)
     end
 
-    def queue
+    def queue       # only used for testing
       @queue.queue
     end
 

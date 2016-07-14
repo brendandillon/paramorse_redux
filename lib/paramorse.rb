@@ -6,6 +6,8 @@ require "./lib/file_encoder"
 require "./lib/instant_noodles"
 require "./lib/letter_decoder"
 require "./lib/letter_encoder"
+require "./lib/parallel_decoder"
+require "./lib/parallel_encoder"
 require "./lib/stream_decoder"
 require "./lib/queue"
 

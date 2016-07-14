@@ -4,7 +4,6 @@ module ParaMorse
     attr_reader :text_to_decode
 
     def initialize
-      @text_to_decode
       @decoder = ParaMorse::Decoder.new
     end
 
@@ -19,6 +18,7 @@ module ParaMorse
     def count
       @text_to_decode.length
     end
+
   end
 
 end

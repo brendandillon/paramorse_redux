@@ -36,6 +36,7 @@ module ParaMorse
     def clear
       queue.clear
     end
+
   end
 
 end

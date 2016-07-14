@@ -38,7 +38,7 @@ module ParaMorse
       return output
     end
 
-    def queue
+    def queue       # only used for testing
       @queue.queue
     end
 

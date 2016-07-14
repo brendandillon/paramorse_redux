@@ -9,6 +9,7 @@ module ParaMorse
         return ""
       end
     end
+
   end
 
 end
