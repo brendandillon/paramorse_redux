@@ -36,3 +36,9 @@ module ParaMorse
     "0" => "1110111011101110111"}
 
 end
+
+en = ParaMorse::ParallelEncoder.new
+de = ParaMorse::ParallelDecoder.new
+
+en.encode_from_file("translated.txt", 3, "back_to_morse*.txt")
+de.decode_from_files(2, "back_to_morse*.txt", "and_back_to_text.txt")

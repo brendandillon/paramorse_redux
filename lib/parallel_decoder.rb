@@ -36,7 +36,7 @@ module ParaMorse
     end
 
     def format_decoded_files
-      decoded_text = @decoded_files.transpose.join
+      decoded_text = @decoded_files[0].zip(*@decoded_files[1..-1]).join
     end
 
     def output_files(output_location, decoded_text)

@@ -438,7 +438,11 @@
         null,
         null,
         null,
-        null
+        null,
+        null,
+        1,
+        null,
+        1
       ],
       "/Users/brendandillon/turing/1module/paramorse_redux/lib/decoder.rb": [
         1,
@@ -446,12 +450,12 @@
         1,
         null,
         1,
-        6,
-        null,
-        6,
-        null,
-        18,
         7,
+        null,
+        7,
+        null,
+        639,
+        136,
         null,
         null,
         null,
@@ -482,15 +486,15 @@
         1,
         null,
         1,
-        4,
+        5,
         null,
         null,
         1,
-        4,
-        4,
-        4,
-        4,
-        4,
+        5,
+        5,
+        5,
+        5,
+        5,
         null,
         null,
         1,
@@ -1440,6 +1444,6 @@
         1
       ]
     },
-    "timestamp": 1468459855
+    "timestamp": 1468473213
   }
 }
